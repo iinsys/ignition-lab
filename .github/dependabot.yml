@@ -1,0 +1,6 @@
+version: 2
+updates:
+  - package-ecosystem: "npm"
+    directory: "/06-github-actions/02-task-build-and-test"
+    schedule:
+      interval: "daily"

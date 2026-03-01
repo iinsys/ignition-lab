@@ -1,0 +1,7 @@
+pwd
+ls
+ls /
+cd /etc
+pwd
+cd ~
+pwd

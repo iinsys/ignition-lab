@@ -1,0 +1,18 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: crashloop-app
+spec:
+  replicas: 1
+  selector:
+    matchLabels:
+      app: crashloop-app
+  template:
+    metadata:
+      labels:
+        app: crashloop-app
+    spec:
+      containers:
+      - name: crashloop-app
+        image: busybox
+        command: ["/bin/sh", "-c", "echo $MESSAGE; sleep 1; exit 1"]
